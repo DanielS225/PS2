@@ -14,6 +14,8 @@ public class MyInteger_Test {
 	MyInteger first = new MyInteger(even);
 	int prime = 17;
 	MyInteger second = new MyInteger(prime);
+	int odd = 15;
+	MyInteger third = new MyInteger(odd);
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -61,6 +63,14 @@ public class MyInteger_Test {
 		assertEquals(true,MyInteger.isPrime(second));
 		assertEquals(false,second.equals(even));
 		assertEquals(true,second.equals(new MyInteger(prime)));
+	}
+	
+	@Test
+	public void testThree() {
+		assertEquals(odd,third.getiValue());
+		assertEquals(false,third.isPrime());
+		assertEquals(false,MyInteger.isPrime(odd));
+		assertEquals(false,MyInteger.isPrime(third));
 	}
 	
 	

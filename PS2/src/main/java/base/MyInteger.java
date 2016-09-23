@@ -29,8 +29,8 @@ public class MyInteger {
 	public boolean isPrime() {
 		if (this.isEven() == false) {
 			boolean prime = true;
-			for (int x = 2; x <= this.iValue / 2; x++) {
-				if (this.iValue % 2 == 0) {
+			for (int x = 2; x <= ((iValue / 2) + 1); x++) {
+				if (iValue % x == 0) {
 					prime = false;
 					break;
 				}
@@ -57,8 +57,8 @@ public class MyInteger {
 	public static boolean isPrime(int num) {
 		if (MyInteger.isEven(num) == false) {
 			boolean prime = true;
-			for (int x = 2; x <= num / 2; x++) {
-				if (num % 2 == 0) {
+			for (int x = 2; x <= ((num / 2) + 1); x++) {
+				if (num % x == 0) {
 					prime = false;
 					break;
 				}
@@ -83,10 +83,10 @@ public class MyInteger {
 	}
 
 	public static boolean isPrime(MyInteger integer) {
-		if (MyInteger.isEven(integer) == false) {
+		if (integer.isEven() == false) {
 			boolean prime = true;
-			for (int x = 2; x <= integer.iValue / 2; x++) {
-				if (integer.iValue % 2 == 0) {
+			for (int x = 2; x <= ((integer.getiValue() / 2) + 1); x++) {
+				if (integer.getiValue() % x == 0) {
 					prime = false;
 					break;
 				}
